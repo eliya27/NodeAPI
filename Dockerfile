@@ -3,7 +3,7 @@ ENV NODE_ENV=production
 
 WORKDIR ./
 
-RUN npm install 
+RUN npm install --production
 
 COPY . .
 
