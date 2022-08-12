@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '9d6f86c8-1fca-4a88-83d7-af9bd8722efc'
-  imageRepository: 'cheeseburger'
+  imageRepository: 'eliyanodeapi'
   containerRegistry: 'eliyagervas.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
