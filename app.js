@@ -9,13 +9,12 @@ const mongodb = require("mongodb");
 const jwt = require("jsonwebtoken");
 
 const cheeseusersModel = require("./models/users");
-const PORT = 3434;
-
+const PORT = process.env.PORT || 5000;
+dotenv.config();
 const app = express();
 
 //Database connection
-const uri =
-  "mongodb://eliyagervas:Microsoft2799@ac-lwlmwob-shard-00-00.3pvwiv6.mongodb.net:27017,ac-lwlmwob-shard-00-01.3pvwiv6.mongodb.net:27017,ac-lwlmwob-shard-00-02.3pvwiv6.mongodb.net:27017/crazycheese?ssl=true&replicaSet=atlas-v4g9cq-shard-0&authSource=admin&retryWrites=true&w=majority";
+const uri = process.env.MONGO_CONNECT;
 
 mongoose
   .connect(uri, {
